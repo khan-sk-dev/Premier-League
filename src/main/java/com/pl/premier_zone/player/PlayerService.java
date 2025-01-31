@@ -1,9 +1,12 @@
 package com.pl.premier_zone.player;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
+
+import jakarta.transaction.Transactional;
 
 @Component
 public class PlayerService {
@@ -39,6 +42,39 @@ public class PlayerService {
 		return playerRepository.findAll().stream()
 				.filter(player -> player.getNation().toLowerCase().contains(searchText.toLowerCase()))
 				.collect(Collectors.toList());
+	}
+
+	public List<Player> getPlayerByTeamAndPosition(String team, String position) {
+		return playerRepository.findAll().stream()
+				.filter(player -> team.equals(player.getTeam()) && position.equals(player.getPos()))
+				.collect(Collectors.toList());
+	}
+
+	public Player addPlayer(Player player) {
+		playerRepository.save(player);
+		return player;
+	}
+
+	public Player updatePlayer(Player updatedPlayer) {
+		Optional<Player> existingplayer = playerRepository.findByName(updatedPlayer.getName());
+
+		if (existingplayer.isPresent()) {
+			Player playerToUpdate = existingplayer.get();
+			playerToUpdate.setName(updatedPlayer.getName());
+			playerToUpdate.setTeam(updatedPlayer.getTeam());
+			playerToUpdate.setPos(updatedPlayer.getPos());
+			playerToUpdate.setNation(updatedPlayer.getNation());
+
+			playerRepository.save(playerToUpdate);
+			return playerToUpdate;
+		}
+
+		return null;
+	}
+
+	@Transactional
+	public void deletePlayer(String playerName) {
+		playerRepository.deleteByName(playerName);
 	}
 
 }

@@ -29,7 +29,7 @@ public class PlayerController {
 		this.playerService = playerService;
 	}
 
-	@GetMapping("path")
+	@GetMapping
 	public List<Player> getPlayer(@RequestParam(required = false) String team,
 			@RequestParam(required = false) String name, @RequestParam(required = false) String position,
 			@RequestParam(required = false) String nation) {

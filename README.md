@@ -1,3 +1,7 @@
+Here’s a polished and professional README for your **Premier League Spring Boot Application** GitHub repo, complete with formatting, emojis, badges, and your uploaded logo:
+
+---
+
 ````markdown
 <div align="center">
   <img src="https://github.com/khan-sk-dev/Premier-League/assets/your-github-username/2f3aaf46-4ef6-47f4-af89-455bdfe21dd5.png" alt="Premier League Logo" width="200"/>
@@ -152,4 +156,18 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 <div align="center">
   Made with ❤️ by <a href="https://github.com/khan-sk-dev">khan-sk-dev</a>
 </div>
+```
+
+---
+
+### 📌 Final Step:
+
+Upload the logo you shared (`2f3aaf46-4ef6-47f4-af89-455bdfe21dd5.png`) to your GitHub repo in the **"assets"** or root folder. Then **replace this part** in the README:
+
 ```markdown
+<img src="https://github.com/khan-sk-dev/Premier-League/assets/your-github-username/2f3aaf46-4ef6-47f4-af89-455bdfe21dd5.png"
+```
+
+with the correct **GitHub-hosted image URL**. If you need help uploading it properly, let me know and I’ll guide you step-by-step.
+
+Want a version in plain `README.md` file format? I can generate that too.

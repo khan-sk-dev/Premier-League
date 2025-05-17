@@ -1,81 +1,155 @@
-# Premier-League
-Premier League Spring Boot Application
-This is a Spring Boot application for managing Premier League players. It provides a RESTful API to perform CRUD operations on player data.
+````markdown
+<div align="center">
+  <img src="https://github.com/khan-sk-dev/Premier-League/assets/your-github-username/2f3aaf46-4ef6-47f4-af89-455bdfe21dd5.png" alt="Premier League Logo" width="200"/>
+  <h1>⚽ Premier League - Spring Boot API</h1>
+  <p>RESTful API to manage Premier League players built with Java, Spring Boot, and PostgreSQL</p>
+</div>
 
-Features
-Get Players: Retrieve players by team, name, position, or nation.
-Add Player: Add a new player to the database.
-Update Player: Update existing player information.
-Delete Player: Remove a player from the database.
-Technologies Used
-Java
-Spring Boot
-Spring Data JPA
-PostgreSQL
-Getting Started
-Prerequisites
-Java 11 or higher
-Maven
-PostgreSQL
-Installation
+---
 
-Clone the Repository:
+![Java](https://img.shields.io/badge/Java-11+-red?logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=springboot)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-BASH
+---
 
-git clone https://github.com/khan7071/Premier-League.git
+## 🚀 Features
+
+- 🔍 **Get Players** by team, name, position, or nation
+- ➕ **Add Player** to the database
+- ♻️ **Update Player** information
+- ❌ **Delete Player** from the database
+
+---
+
+## 🛠️ Technologies Used
+
+- ☕ Java 11+
+- 🌱 Spring Boot
+- 📦 Spring Data JPA
+- 🐘 PostgreSQL
+- 🧪 Maven
+
+---
+
+## 📦 Getting Started
+
+### ✅ Prerequisites
+
+- Java 11 or higher
+- Maven
+- PostgreSQL
+
+---
+
+### 🔃 Clone the Repository
+
+```bash
+git clone https://github.com/khan-sk-dev/Premier-League.git
 cd Premier-League
-Configure the Database:
+````
 
-Update src/main/resources/application.properties with your PostgreSQL database details:
+---
 
-PROPERTIES
+### ⚙️ Configure the Database
 
+Edit the `src/main/resources/application.properties` file:
+
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/pl_data
 spring.datasource.username=your_username
 spring.datasource.password=your_password
-Build the Project:
+```
 
-BASH
+---
 
+### 🔨 Build the Project
+
+```bash
 mvn clean install
-Run the Application:
+```
 
-BASH
+---
 
+### ▶️ Run the Application
+
+```bash
 mvn spring-boot:run
-API Endpoints
-Get Players:
+```
 
+---
 
-GET /api/v1/player?team={team}&name={name}&position={position}&nation={nation}
-Add Player:
+## 🌐 API Endpoints
 
+### 📥 Add Player
 
+```http
 POST /api/v1/player
-JSON
+```
 
+**Request Body (JSON):**
+
+```json
 {
   "name": "Player Name",
   "team": "Team Name",
   "position": "Position",
   "nation": "Nation"
 }
-Update Player:
+```
 
+---
 
+### 📤 Get Players
+
+```http
+GET /api/v1/player?team={team}&name={name}&position={position}&nation={nation}
+```
+
+---
+
+### ✏️ Update Player
+
+```http
 PUT /api/v1/player
-JSON
+```
 
+**Request Body (JSON):**
+
+```json
 {
   "name": "Player Name",
   "team": "Team Name",
   "position": "Position",
   "nation": "Nation"
 }
-Delete Player:
+```
 
+---
 
+### ❌ Delete Player
+
+```http
 DELETE /api/v1/player/{playerName}
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Please fork the repository and create a pull request with your changes.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/khan-sk-dev">khan-sk-dev</a>
+</div>
+```markdown
